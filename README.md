@@ -7,13 +7,14 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [When Dungeons Arise](https://modrinth.com/mod/when-dungeons-arise) | Estructuras y mazmorras enormes | Solo servidor |
 | [YUNG's Better Dungeons](https://modrinth.com/mod/yungs-better-dungeons) | Mazmorras vanilla rehechas | Solo servidor |
 | [L_Ender's Cataclysm](https://modrinth.com/mod/l_enders-cataclysm) | Jefes difíciles, armas y armaduras | Servidor **y** jugadores |
+| [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
 
 Los mods y sus dependencias (YUNG's API, Curios API, Lionfish API) se descargan solos desde Modrinth al arrancar.
 
 ## Requisitos
 
 - Un servidor Linux con Docker y el plugin `docker compose`.
-- 8 GB de RAM o más (el servidor de Minecraft usa 6 GB por defecto).
+- 12 GB de RAM o más (el servidor de Minecraft usa 8 GB por defecto).
 - Una cuenta gratis en [playit.gg](https://playit.gg).
 - Cada jugador necesita su propio **Minecraft Java Edition** original. Bedrock (consola, móvil, Microsoft Store) no puede entrar.
 
@@ -30,7 +31,7 @@ En `.env` rellena:
 
 - `PLAYIT_SECRET_KEY`: en playit.gg entra a **Add Agent → Docker** y copia la clave secreta.
 - `MC_OPS`: tu nick de Minecraft, para tener permisos de operador.
-- `MC_MEMORY`: RAM del servidor (por defecto `6G`).
+- `MC_MEMORY`: RAM del servidor (por defecto `8G`).
 
 Arranca todo:
 
@@ -57,6 +58,17 @@ No hace falta abrir puertos en el router. Cualquiera con la dirección y un Mine
 4. Multijugador → Agregar servidor → la dirección de playit.
 
 When Dungeons Arise y YUNG's Better Dungeons no hacen falta en el cliente: las estructuras las genera el servidor.
+
+Opcionales, cada jugador decide (no hacen falta para entrar):
+
+| Mod | Para qué |
+|---|---|
+| Sodium | Más FPS |
+| Iris Shaders | Cargar shaders; necesita Sodium. Después, en **Add content → Shaders**, instalar uno como Photon Shaders |
+| Distant Horizons | Ver hasta el horizonte; como el servidor también lo tiene, el terreno lejano llega solo |
+| JEI | Ver todos los objetos y sus recetas; buscar `@cataclysm` para ver los del mod |
+
+Con shaders y Distant Horizons conviene darle 6–8 GB de RAM a la instancia (**Settings → Java and memory**).
 
 ## Comandos útiles
 
@@ -92,7 +104,13 @@ docker compose start minecraft
 
 ## Actualizaciones de mods
 
-En cada arranque el servidor descarga la última versión compatible de cada mod. Si después de un reinicio alguien no puede entrar por "versión distinta", que actualice Cataclysm en su launcher.
+En cada arranque el servidor descarga la última versión compatible de cada mod. Si después de un reinicio alguien no puede entrar por "versión distinta", que actualice sus mods (Cataclysm, y Distant Horizons si lo usa) en su launcher.
+
+Distant Horizons genera el terreno lejano en el servidor y lo guarda dentro de `data/`, así que usa más CPU y disco mientras haya jugadores explorando.
+
+## Problemas comunes
+
+- **`PKIX path building failed` en los logs:** un firewall de la red está interceptando o bloqueando HTTPS. El servidor necesita salir sin inspección SSL hacia `*.mojang.com`, `*.minecraft.net`, `*.minecraftservices.com`, `*.modrinth.com`, `*.neoforged.net` y `*.playit.gg`.
 
 ## Agregar más mods
 

@@ -10,12 +10,13 @@ services:
       EULA: "TRUE"
       TYPE: NEOFORGE
       VERSION: "1.21.1"
-      MEMORY: ${MC_MEMORY:-6G}
+      MEMORY: ${MC_MEMORY:-8G}
 
       MODRINTH_PROJECTS: |
         when-dungeons-arise
         yungs-better-dungeons
         l_enders-cataclysm
+        distanthorizons
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
 
       # Only paid Java Edition accounts can join; no whitelist, anyone with the address gets in.
