@@ -8,9 +8,13 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [YUNG's Better Dungeons](https://modrinth.com/mod/yungs-better-dungeons) | Mazmorras vanilla rehechas | Solo servidor |
 | [L_Ender's Cataclysm](https://modrinth.com/mod/l_enders-cataclysm) | Jefes difíciles, armas y armaduras | Servidor **y** jugadores |
 | [Waystones](https://modrinth.com/mod/waystones) | Piedras para teletransportarse entre lugares ya visitados | Servidor **y** jugadores |
+| [Sophisticated Backpacks](https://modrinth.com/mod/sophisticated-backpacks) | Mochilas con mejoras (recoger objetos, imán, comer solo…) | Servidor **y** jugadores |
+| [Immersive Aircraft](https://modrinth.com/mod/immersive-aircraft) | Aviones rústicos y dirigibles | Servidor **y** jugadores |
+| [Small Ships](https://modrinth.com/mod/small-ships) | Barcos medievales con velas y cañones | Servidor **y** jugadores |
+| [GraveStone Mod](https://modrinth.com/mod/gravestone-mod) | Al morir, el inventario queda guardado en una tumba | Servidor **y** jugadores |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
 
-Los mods y sus dependencias (YUNG's API, Curios API, Lionfish API, Balm) se descargan solos desde Modrinth al arrancar.
+Los mods y sus dependencias (YUNG's API, Curios API, Lionfish API, Balm, Sophisticated Core) se descargan solos desde Modrinth al arrancar.
 
 ## Requisitos
 
@@ -55,8 +59,16 @@ No hace falta abrir puertos en el router. Cualquiera con la dirección y un Mine
 
 1. Instalar [Modrinth App](https://modrinth.com/app) o [Prism Launcher](https://prismlauncher.org) e iniciar sesión con la cuenta de Microsoft.
 2. Crear una instancia **NeoForge 1.21.1**.
-3. Agregar **L_Ender's Cataclysm** y **Waystones**; Curios API, Lionfish API y Balm se instalan solas. Sin estos dos no se puede entrar al servidor.
+3. Agregar estos mods; sus dependencias se instalan solas. Sin ellos no se puede entrar al servidor:
+   - L_Ender's Cataclysm
+   - Waystones
+   - Sophisticated Backpacks
+   - Immersive Aircraft
+   - Small Ships
+   - GraveStone Mod
 4. Multijugador → Agregar servidor → la dirección de playit.
+
+Lo más fácil es que el administrador exporte su instancia de Modrinth App como modpack (tres puntos de la instancia → **Export**) y los demás la importen con **+ → Import**: quedan con los mismos mods y versiones.
 
 When Dungeons Arise y YUNG's Better Dungeons no hacen falta en el cliente: las estructuras las genera el servidor.
 
@@ -107,7 +119,7 @@ docker compose start minecraft
 
 ## Actualizaciones de mods
 
-En cada arranque el servidor descarga la última versión compatible de cada mod. Si después de un reinicio alguien no puede entrar por "versión distinta", que actualice sus mods (Cataclysm y Waystones, y Distant Horizons si lo usa) en su launcher.
+En cada arranque el servidor descarga la última versión compatible de cada mod. Si después de un reinicio alguien no puede entrar por "versión distinta", que actualice sus mods en el launcher (en Modrinth App, **Content → Update all**).
 
 Distant Horizons genera el terreno lejano en el servidor y lo guarda dentro de `data/`, así que usa más CPU y disco mientras haya jugadores explorando.
 
