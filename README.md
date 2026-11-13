@@ -12,9 +12,12 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [Immersive Aircraft](https://modrinth.com/mod/immersive-aircraft) | Aviones rústicos y dirigibles | Servidor **y** jugadores |
 | [Small Ships](https://modrinth.com/mod/small-ships) | Barcos medievales con velas y cañones | Servidor **y** jugadores |
 | [GraveStone Mod](https://modrinth.com/mod/gravestone-mod) | Al morir, el inventario queda guardado en una tumba | Servidor **y** jugadores |
+| [ChoiceTheorem's Overhauled Village](https://modrinth.com/mod/ct-overhaul-village) | Aldeas más grandes y distintas según el bioma | Solo servidor |
+| [Villager Names](https://modrinth.com/mod/villager-names-serilum) | Nombres propios para los aldeanos | Solo servidor |
+| [Guard Villagers](https://modrinth.com/mod/guard-villagers) | Guardias que patrullan y defienden las aldeas | Servidor **y** jugadores |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
 
-Los mods y sus dependencias (YUNG's API, Curios API, Lionfish API, Balm, Sophisticated Core) se descargan solos desde Modrinth al arrancar.
+Los mods y sus dependencias (YUNG's API, Curios API, Lionfish API, Balm, Sophisticated Core, Lithostitched, Collective) se descargan solos desde Modrinth al arrancar.
 
 ## Requisitos
 
@@ -66,6 +69,7 @@ No hace falta abrir puertos en el router. Cualquiera con la dirección y un Mine
    - Immersive Aircraft
    - Small Ships
    - GraveStone Mod
+   - Guard Villagers
 4. Multijugador → Agregar servidor → la dirección de playit.
 
 Lo más fácil es que el administrador exporte su instancia de Modrinth App como modpack (tres puntos de la instancia → **Export**) y los demás la importen con **+ → Import**: quedan con los mismos mods y versiones.

@@ -25,6 +25,9 @@ services:
         immersive-aircraft
         small-ships
         gravestone-mod
+        ct-overhaul-village
+        villager-names-serilum
+        guard-villagers
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
 
       # Only paid Java Edition accounts can join; no whitelist, anyone with the address gets in.
