@@ -7,9 +7,10 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [When Dungeons Arise](https://modrinth.com/mod/when-dungeons-arise) | Estructuras y mazmorras enormes | Solo servidor |
 | [YUNG's Better Dungeons](https://modrinth.com/mod/yungs-better-dungeons) | Mazmorras vanilla rehechas | Solo servidor |
 | [L_Ender's Cataclysm](https://modrinth.com/mod/l_enders-cataclysm) | Jefes difíciles, armas y armaduras | Servidor **y** jugadores |
+| [Waystones](https://modrinth.com/mod/waystones) | Piedras para teletransportarse entre lugares ya visitados | Servidor **y** jugadores |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
 
-Los mods y sus dependencias (YUNG's API, Curios API, Lionfish API) se descargan solos desde Modrinth al arrancar.
+Los mods y sus dependencias (YUNG's API, Curios API, Lionfish API, Balm) se descargan solos desde Modrinth al arrancar.
 
 ## Requisitos
 
@@ -54,7 +55,7 @@ No hace falta abrir puertos en el router. Cualquiera con la dirección y un Mine
 
 1. Instalar [Modrinth App](https://modrinth.com/app) o [Prism Launcher](https://prismlauncher.org) e iniciar sesión con la cuenta de Microsoft.
 2. Crear una instancia **NeoForge 1.21.1**.
-3. Agregar **L_Ender's Cataclysm**; Curios API y Lionfish API se instalan solas.
+3. Agregar **L_Ender's Cataclysm** y **Waystones**; Curios API, Lionfish API y Balm se instalan solas. Sin estos dos no se puede entrar al servidor.
 4. Multijugador → Agregar servidor → la dirección de playit.
 
 When Dungeons Arise y YUNG's Better Dungeons no hacen falta en el cliente: las estructuras las genera el servidor.
@@ -67,6 +68,8 @@ Opcionales, cada jugador decide (no hacen falta para entrar):
 | Iris Shaders | Cargar shaders; necesita Sodium. Después, en **Add content → Shaders**, instalar uno como Photon Shaders |
 | Distant Horizons | Ver hasta el horizonte; como el servidor también lo tiene, el terreno lejano llega solo |
 | JEI | Ver todos los objetos y sus recetas; buscar `@cataclysm` para ver los del mod |
+| Xaero's Minimap + Xaero's World Map | Minimapa, mapa completo (**M**) y waypoints (**B**) |
+| Xaero's Maps x Waystones | Muestra las waystones en el mapa de Xaero's |
 
 Con shaders y Distant Horizons conviene darle 6–8 GB de RAM a la instancia (**Settings → Java and memory**).
 
@@ -104,7 +107,7 @@ docker compose start minecraft
 
 ## Actualizaciones de mods
 
-En cada arranque el servidor descarga la última versión compatible de cada mod. Si después de un reinicio alguien no puede entrar por "versión distinta", que actualice sus mods (Cataclysm, y Distant Horizons si lo usa) en su launcher.
+En cada arranque el servidor descarga la última versión compatible de cada mod. Si después de un reinicio alguien no puede entrar por "versión distinta", que actualice sus mods (Cataclysm y Waystones, y Distant Horizons si lo usa) en su launcher.
 
 Distant Horizons genera el terreno lejano en el servidor y lo guarda dentro de `data/`, así que usa más CPU y disco mientras haya jugadores explorando.
 
