@@ -169,6 +169,8 @@ mv data/world backups/world-$(date +%F)
 docker compose start minecraft
 ```
 
+El mundo nuevo usa la semilla de `SEED` en `docker-compose.yml`: 2786386421968123439, que aparece en un valle entre montañas (Jagged Peaks) y un bosque de cerezos, con una aldea de llanura en X 64, Z -192 y océano a los lados. Para otro terreno, cambia `SEED` antes de mover el mundo, o quítala para que salga uno al azar.
+
 Se conservan los operadores y la configuración de `data/config`. Se pierde todo lo que vive en el mundo: terreno, inventarios, waystones, progreso de habilidades, zonas PvP y la configuración por mundo (`serverconfig`). Para volver al mundo anterior, detén el servidor y devuelve esa carpeta a `data/world`.
 
 Cada jugador debe borrar en su instancia las carpetas de este servidor dentro de `xaero/minimap`, `xaero/world-map` y `Distant_Horizons_server_data`. Si no, verá el mapa y el horizonte del mundo anterior.

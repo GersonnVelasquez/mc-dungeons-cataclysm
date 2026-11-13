@@ -45,6 +45,8 @@ services:
       OPS: ${MC_OPS:-}
 
       DIFFICULTY: hard
+      # Only read when data/world doesn't exist yet; changing it never alters an existing world.
+      SEED: "2786386421968123439"
       MOTD: "Dungeons & Cataclysm"
       MAX_PLAYERS: "10"
       VIEW_DISTANCE: "10"
