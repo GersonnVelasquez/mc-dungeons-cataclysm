@@ -38,7 +38,6 @@ services:
         lithium
         modernfix
         ferrite-core
-        chunky
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
 
       # Only paid Java Edition accounts can join; no whitelist, anyone with the address gets in.
