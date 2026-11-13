@@ -18,6 +18,7 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [Apotheosis](https://modrinth.com/mod/apotheosis) | Encantamientos mejorados, gemas, equipo con rarezas y mobs élite | Servidor **y** jugadores |
 | [Mowzie's Mobs](https://modrinth.com/mod/mowzies-mobs) | Criaturas y jefes nuevos | Servidor **y** jugadores |
 | [Pufferfish's Skills](https://modrinth.com/mod/skills) + [Default Skill Trees](https://modrinth.com/mod/default-skill-trees) | Árboles de habilidades que se suben con experiencia (tecla **K**) | Servidor **y** jugadores |
+| [PVP Flagging](https://modrinth.com/mod/pvp-flagging) | PvP opcional: solo pelean los que lo activan con `/pvpFlag`, y los operadores pueden crear zonas PvP | Servidor **y** jugadores |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
 
 Los mods y sus dependencias (bibliotecas como Curios, Balm, GeckoLib o Placebo) se descargan solos desde Modrinth al arrancar.
@@ -77,6 +78,7 @@ No hace falta abrir puertos en el router. Cualquiera con la dirección y un Mine
    - Mowzie's Mobs
    - Pufferfish's Skills
    - Default Skill Trees
+   - PVP Flagging
 4. Multijugador → Agregar servidor → la dirección de playit.
 
 Pufferfish's Skills e Iris usan la misma tecla (**K**); hay que cambiar una en **Opciones → Controles**.
@@ -97,6 +99,32 @@ Opcionales, cada jugador decide (no hacen falta para entrar):
 | Xaero's Maps x Waystones | Muestra las waystones en el mapa de Xaero's |
 
 Con shaders y Distant Horizons conviene darle 6–8 GB de RAM a la instancia (**Settings → Java and memory**).
+
+## PvP
+
+Un jugador solo puede lastimar a otro si **los dos** tienen el PvP activo. Cada uno lo maneja desde el chat:
+
+| Comando | Qué hace |
+|---|---|
+| `/pvpFlag` | Activa o apaga tu PvP |
+| `/pvpFlag on` / `/pvpFlag off` | Lo activa / lo apaga |
+| `/pvpFlag status` | Dice si lo tienes activo |
+
+- Quien tiene el PvP activo lleva una daga roja junto al nombre.
+- Apagarlo tarda 15 segundos, y se cancela si en ese tiempo pegas o te pega otro jugador.
+- Al morir se apaga solo.
+
+Los operadores pueden crear zonas PvP: un rectángulo entre dos esquinas, a cualquier altura, en la dimensión donde estén. Al entrar, el PvP se activa solo y no se puede apagar adentro; al salir sigue activo hasta usar `/pvpFlag off`.
+
+```
+/pvpZone add arena 100 200 140 240 5
+/pvpZone list
+/pvpZone remove arena
+```
+
+`100 200` y `140 240` son las coordenadas X y Z de dos esquinas opuestas (se ven con **F3**). El último número son los bloques alrededor de la zona donde avisa que estás por entrar.
+
+Los tiempos y el estado al morir o al conectarse se cambian en `data/world/serverconfig/pvp_flagging-server.toml`.
 
 ## Comandos útiles
 

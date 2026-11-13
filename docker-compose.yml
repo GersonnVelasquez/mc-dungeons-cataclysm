@@ -34,6 +34,7 @@ services:
         skills:beta
         attributes
         default-skill-trees
+        pvp-flagging
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
 
       # Only paid Java Edition accounts can join; no whitelist, anyone with the address gets in.
@@ -46,6 +47,9 @@ services:
       VIEW_DISTANCE: "10"
       # Cataclysm bosses knock players into the air; without this the server kicks them for "flying".
       ALLOW_FLIGHT: "TRUE"
+      # PVP Flagging decides who can fight (both players need /pvpFlag on);
+      # setting this to FALSE would block PvP even between flagged players.
+      PVP: "TRUE"
     volumes:
       - ./data:/data
     tty: true
