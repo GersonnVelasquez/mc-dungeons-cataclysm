@@ -15,6 +15,7 @@ services:
       VERSION: "1.21.1"
       MEMORY: ${MC_MEMORY:-8G}
 
+      # Pufferfish's Skills only publishes beta builds, hence "skills:beta".
       MODRINTH_PROJECTS: |
         when-dungeons-arise
         yungs-better-dungeons
@@ -28,6 +29,11 @@ services:
         ct-overhaul-village
         villager-names-serilum
         guard-villagers
+        apotheosis
+        mowzies-mobs
+        skills:beta
+        attributes
+        default-skill-trees
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
 
       # Only paid Java Edition accounts can join; no whitelist, anyone with the address gets in.

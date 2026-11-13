@@ -15,9 +15,12 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [ChoiceTheorem's Overhauled Village](https://modrinth.com/mod/ct-overhaul-village) | Aldeas más grandes y distintas según el bioma | Solo servidor |
 | [Villager Names](https://modrinth.com/mod/villager-names-serilum) | Nombres propios para los aldeanos | Solo servidor |
 | [Guard Villagers](https://modrinth.com/mod/guard-villagers) | Guardias que patrullan y defienden las aldeas | Servidor **y** jugadores |
+| [Apotheosis](https://modrinth.com/mod/apotheosis) | Encantamientos mejorados, gemas, equipo con rarezas y mobs élite | Servidor **y** jugadores |
+| [Mowzie's Mobs](https://modrinth.com/mod/mowzies-mobs) | Criaturas y jefes nuevos | Servidor **y** jugadores |
+| [Pufferfish's Skills](https://modrinth.com/mod/skills) + [Default Skill Trees](https://modrinth.com/mod/default-skill-trees) | Árboles de habilidades que se suben con experiencia (tecla **K**) | Servidor **y** jugadores |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
 
-Los mods y sus dependencias (YUNG's API, Curios API, Lionfish API, Balm, Sophisticated Core, Lithostitched, Collective) se descargan solos desde Modrinth al arrancar.
+Los mods y sus dependencias (bibliotecas como Curios, Balm, GeckoLib o Placebo) se descargan solos desde Modrinth al arrancar.
 
 ## Requisitos
 
@@ -70,7 +73,13 @@ No hace falta abrir puertos en el router. Cualquiera con la dirección y un Mine
    - Small Ships
    - GraveStone Mod
    - Guard Villagers
+   - Apotheosis
+   - Mowzie's Mobs
+   - Pufferfish's Skills
+   - Default Skill Trees
 4. Multijugador → Agregar servidor → la dirección de playit.
+
+Pufferfish's Skills e Iris usan la misma tecla (**K**); hay que cambiar una en **Opciones → Controles**.
 
 Lo más fácil es que el administrador exporte su instancia de Modrinth App como modpack (tres puntos de la instancia → **Export**) y los demás la importen con **+ → Import**: quedan con los mismos mods y versiones.
 
