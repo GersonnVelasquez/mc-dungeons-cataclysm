@@ -20,6 +20,7 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [Pufferfish's Skills](https://modrinth.com/mod/skills) + [Default Skill Trees](https://modrinth.com/mod/default-skill-trees) | Árboles de habilidades que se suben con experiencia (tecla **K**) | Servidor **y** jugadores |
 | [PVP Flagging](https://modrinth.com/mod/pvp-flagging) | PvP opcional: solo pelean los que lo activan con `/pvpFlag`, y los operadores pueden crear zonas PvP | Servidor **y** jugadores |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
+| [Lithium](https://modrinth.com/mod/lithium), [ModernFix](https://modrinth.com/mod/modernfix) y [FerriteCore](https://modrinth.com/mod/ferrite-core) | Rendimiento: menos CPU por tick, menos RAM y arranque más rápido, sin cambiar el juego | Servidor y, opcional, jugadores |
 
 Los mods y sus dependencias (bibliotecas como Curios, Balm, GeckoLib o Placebo) se descargan solos desde Modrinth al arrancar.
 
@@ -92,6 +93,7 @@ Opcionales, cada jugador decide (no hacen falta para entrar):
 | Mod | Para qué |
 |---|---|
 | Sodium | Más FPS |
+| ModernFix, FerriteCore, ImmediatelyFast, Entity Culling, More Culling, Dynamic FPS | Más FPS y menos RAM; Dynamic FPS además baja los FPS con el juego minimizado. Ninguno cambia el juego |
 | Iris Shaders | Cargar shaders; necesita Sodium. Después, en **Add content → Shaders**, instalar uno como Photon Shaders |
 | Distant Horizons | Ver hasta el horizonte; como el servidor también lo tiene, el terreno lejano llega solo |
 | JEI | Ver todos los objetos y sus recetas; buscar `@cataclysm` para ver los del mod |
@@ -157,6 +159,19 @@ docker compose stop minecraft
 tar czf backups/mundo-$(date +%F).tar.gz data
 docker compose start minecraft
 ```
+
+Empezar un mundo nuevo (el anterior queda guardado en `backups/`):
+
+```bash
+docker compose stop minecraft
+mkdir -p backups
+mv data/world backups/world-$(date +%F)
+docker compose start minecraft
+```
+
+Se conservan los operadores y la configuración de `data/config`. Se pierde todo lo que vive en el mundo: terreno, inventarios, waystones, progreso de habilidades, zonas PvP y la configuración por mundo (`serverconfig`). Para volver al mundo anterior, detén el servidor y devuelve esa carpeta a `data/world`.
+
+Cada jugador debe borrar en su instancia las carpetas de este servidor dentro de `xaero/minimap`, `xaero/world-map` y `Distant_Horizons_server_data`. Si no, verá el mapa y el horizonte del mundo anterior.
 
 ## Actualizaciones de mods
 

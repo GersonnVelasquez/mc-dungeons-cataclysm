@@ -35,6 +35,9 @@ services:
         attributes
         default-skill-trees
         pvp-flagging
+        lithium
+        modernfix
+        ferrite-core
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
 
       # Only paid Java Edition accounts can join; no whitelist, anyone with the address gets in.
