@@ -21,6 +21,7 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [PVP Flagging](https://modrinth.com/mod/pvp-flagging) | PvP opcional: solo pelean los que lo activan con `/pvpFlag`, y los operadores pueden crear zonas PvP | Servidor **y** jugadores |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
 | [Lithium](https://modrinth.com/mod/lithium), [ModernFix](https://modrinth.com/mod/modernfix) y [FerriteCore](https://modrinth.com/mod/ferrite-core) | Rendimiento: menos CPU por tick, menos RAM y arranque más rápido, sin cambiar el juego | Servidor y, opcional, jugadores |
+| [Chunky](https://modrinth.com/mod/chunky) | Genera el terreno por adelantado para que explorar zonas nuevas no atrase al servidor | Solo servidor |
 
 Los mods y sus dependencias (bibliotecas como Curios, Balm, GeckoLib o Placebo) se descargan solos desde Modrinth al arrancar.
 
@@ -159,6 +160,17 @@ docker compose stop minecraft
 tar czf backups/mundo-$(date +%F).tar.gz data
 docker compose start minecraft
 ```
+
+Generar el terreno por adelantado con Chunky. Usa mucha CPU mientras corre, así que conviene hacerlo cuando nadie esté jugando:
+
+```bash
+docker exec mc-dungeons rcon-cli chunky spawn
+docker exec mc-dungeons rcon-cli chunky radius 2000
+docker exec mc-dungeons rcon-cli chunky quiet 60
+docker exec mc-dungeons rcon-cli chunky start
+```
+
+Eso genera un cuadrado de 4000 × 4000 bloques alrededor del spawn y muestra el avance cada minuto en `docker compose logs -f minecraft`. `chunky pause` lo detiene guardando el avance y `chunky continue` lo retoma, también después de reiniciar el servidor. `chunky cancel` lo termina sin borrar lo que ya se generó.
 
 Empezar un mundo nuevo (el anterior queda guardado en `backups/`):
 
