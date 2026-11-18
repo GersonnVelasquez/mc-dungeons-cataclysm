@@ -1,3 +1,0 @@
-forceload add -1414 -590 -1214 -390
-say Preparando la arena de los Juegos del Hambre: cargando la isla de hongos...
-schedule function hambre:arena/esperar 1s replace

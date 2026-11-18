@@ -132,29 +132,35 @@ Los tiempos y el estado al morir o al conectarse se cambian en `data/world/serve
 
 ## Juegos del Hambre
 
-La arena es la isla de hongos del oeste, con la cornucopia en X -1314, Z -490: ahí no aparecen monstruos y el mar la rodea. El lobby es el punto de aparición del mundo (X 9, Z 0).
+La arena es el mapa [Downstream](https://www.planetminecraft.com/project/downstream-survival-games-map/) de Schnogot, hecho con eti28 y flashced. Es una isla de unos 400 × 300 bloques con cascadas, ruinas, túneles y 166 cofres, y la cornucopia en el centro (X 0, Z 0) con 24 pedestales. Vive en una dimensión aparte, `hambre:arena`, donde siempre es de día y alrededor solo hay vacío. El autor permite usarlo en servidores dando crédito; el mapa no está en este repo.
 
-### Preparar la arena (una sola vez)
+### Instalar el mapa (una sola vez)
 
-Con nadie conectado, porque genera la isla de golpe:
+1. Descarga el mapa desde su página y deja la carpeta `region` de ese mundo en `data/world/dimensions/hambre/arena/region`, con el servidor detenido. Los archivos tienen que quedar del mismo dueño que el resto del mundo:
 
-```bash
-docker exec mc-dungeons rcon-cli function hambre:arena/preparar
-```
+   ```bash
+   sudo chown -R --reference=data/world data/world/dimensions
+   ```
 
-Cuando termina, en los logs sale `Arena lista`. Queda una cornucopia con 9 cofres sobre un bloque de oro, unos 20 cofres repartidos por la isla y toda la isla marcada como zona PvP de PVP Flagging: a quien entre se le activa el PvP.
+2. Arranca el servidor y, con nadie conectado, prepara la arena:
+
+   ```bash
+   docker exec mc-dungeons rcon-cli function hambre:arena/preparar
+   ```
+
+   Convierte el mapa (es de Minecraft 1.7), arma un lobby flotante al sur de la isla y marca la arena como zona PvP de PVP Flagging. Termina cuando en los logs sale `Arena lista`.
 
 ### Jugar una partida
 
 1. Cada jugador guarda sus cosas en un cofre: **al empezar la partida se vacía el inventario**.
 2. Cada jugador se une con `/battleroyale team join`, desde donde esté. `/battleroyale team leave` lo saca.
-3. El operador escribe `/battleroyale game init` y todos los que se unieron van al lobby.
-4. El operador escribe `/battleroyale game start` y aparecen alrededor de la cornucopia, con 10 segundos sin recibir daño.
+3. El operador escribe `/function hambre:partida/preparar` y todos los que se unieron van al lobby de la arena.
+4. El operador escribe `/battleroyale game start` y cada uno aparece en un pedestal alrededor de la cornucopia, con 10 segundos sin recibir daño.
 
 - Se juega en modo aventura: no se rompen ni se ponen bloques, y los cofres se llenan solos cuando alguien se acerca.
-- La zona empieza a cerrarse a los 5 minutos y llega al centro en unos 20; fuera de ella se pierde vida.
-- Quien muere pasa a espectador y su tumba queda en la isla. Gana el último en pie y todos vuelven al lobby.
-- Al volver, `/pvpFlag off` apaga el PvP que activó la isla.
+- La zona empieza a cerrarse a los 5 minutos y llega a la cornucopia en unos 20; fuera de ella se pierde vida.
+- Quien muere pasa a espectador. Gana el último en pie y todos vuelven al lobby.
+- En el lobby, pisar el bloque de oro devuelve al spawn del mundo normal y apaga el PvP.
 - `/battleroyale game stop` cancela la partida y regresa a todos al lobby.
 
 Equipos, tiempos, lobby y botín se cambian en `config/battleroyale/`; esos archivos se copian al servidor en cada arranque.

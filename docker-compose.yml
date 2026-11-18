@@ -44,7 +44,7 @@ services:
       # ./config is copied into data/config on every start. Without this, a copy the mod
       # rewrote in data/config would be newer and win over the repo's version.
       SYNC_SKIP_NEWER_IN_DESTINATION: "false"
-      DATAPACKS: /datapacks/arena-hambre
+      DATAPACKS: /datapacks/arena
 
       # Only paid Java Edition accounts can join; no whitelist, anyone with the address gets in.
       ONLINE_MODE: "TRUE"
