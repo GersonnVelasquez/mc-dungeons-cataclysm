@@ -160,7 +160,7 @@ La arena es el mapa [Downstream](https://www.planetminecraft.com/project/downstr
 - Se juega en modo aventura: no se rompen ni se ponen bloques, y los cofres se llenan solos cuando alguien se acerca.
 - La zona empieza a cerrarse a los 5 minutos y llega a la cornucopia en unos 20; fuera de ella se pierde vida.
 - Quien muere pasa a espectador. Gana el último en pie y todos vuelven al lobby.
-- En el lobby, pisar el bloque de oro devuelve al spawn del mundo normal y apaga el PvP. Quien se unió y ya no quiere jugar sale antes del equipo con `/battleroyale team leave`.
+- En el lobby, pisar el bloque de oro devuelve al spawn del mundo normal, en modo supervivencia y con el PvP apagado. Quien se unió y ya no quiere jugar sale antes del equipo con `/battleroyale team leave`.
 - `/function hambre:partida/parar` cancela la partida y regresa a todos al lobby.
 - Para probar solo, invoca un mob en el lobby y agrégalo como rival: `/summon minecraft:pig ~ ~ ~` y luego `/battleroyale team add @e[type=minecraft:pig,limit=1,sort=nearest] 2`.
 
