@@ -9,4 +9,4 @@ execute in hambre:arena run setblock 0 120 -305 minecraft:light_weighted_pressur
 execute in hambre:arena run setblock 1 120 -305 minecraft:oak_sign[rotation=0]{front_text:{messages:['"Pisa el oro"','"para volver"','"al mundo"','"normal"']}}
 execute in hambre:arena run pvpZone add arena -250 -250 250 250 8
 execute in hambre:arena run forceload remove all
-say Arena lista: mapa Downstream convertido, lobby armado y zona PvP creada.
+say Arena lista: mapa Downstream cargado, lobby armado y zona PvP creada.

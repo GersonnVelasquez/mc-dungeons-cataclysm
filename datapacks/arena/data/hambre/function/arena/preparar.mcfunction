@@ -1,6 +1,7 @@
-# forceload loads each chunk synchronously on the server thread; converting the whole 1.7 map in
-# one tick trips the 60 s watchdog, so it goes in 4x4-chunk batches a couple of seconds apart.
-say Preparando la arena: convirtiendo el mapa Downstream por partes (unos 2 minutos)...
+# Loading every map chunk once finishes them (light, initial mobs) before the first match instead of
+# during it. forceload loads chunks synchronously on the server thread, and all 1024 in one tick
+# would trip the 60 s watchdog, so they go in 4x4-chunk batches a couple of seconds apart.
+say Preparando la arena: cargando el mapa Downstream por partes (unos 2 minutos)...
 schedule function hambre:arena/lote/01 2s
 schedule function hambre:arena/lote/02 4s
 schedule function hambre:arena/lote/03 6s

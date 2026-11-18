@@ -136,19 +136,20 @@ La arena es el mapa [Downstream](https://www.planetminecraft.com/project/downstr
 
 ### Instalar el mapa (una sola vez)
 
-1. Descarga el mapa desde su página y deja la carpeta `region` de ese mundo en `data/world/dimensions/hambre/arena/region`, con el servidor detenido. Los archivos tienen que quedar del mismo dueño que el resto del mundo:
+1. Descarga el mapa desde su página. Es de Minecraft 1.7, y el servidor no puede convertir mapas tan viejos dentro de una dimensión nueva (`Unknown dimension type` en el log), así que primero se convierte con un servidor vanilla 1.21.1 vacío: pon la carpeta `region` del mapa en `world/DIM1/region` de ese servidor y arráncalo una vez con `java -jar server.jar --forceUpgrade --nogui`. Se usa el End porque conserva la altura antigua (0 a 255), igual que la dimensión de la arena.
+2. Con el servidor detenido, deja esa carpeta `world/DIM1/region` ya convertida en `data/world/dimensions/hambre/arena/region`. Los archivos tienen que quedar del mismo dueño que el resto del mundo:
 
    ```bash
    sudo chown -R --reference=data/world data/world/dimensions
    ```
 
-2. Arranca el servidor y, con nadie conectado, prepara la arena:
+3. Arranca el servidor y, con nadie conectado, prepara la arena:
 
    ```bash
    docker exec mc-dungeons rcon-cli function hambre:arena/preparar
    ```
 
-   Convierte el mapa (es de Minecraft 1.7), arma un lobby flotante al sur de la isla y marca la arena como zona PvP de PVP Flagging. Termina cuando en los logs sale `Arena lista`.
+   Carga el mapa por partes, arma un lobby flotante al sur de la isla y marca la arena como zona PvP de PVP Flagging. Termina cuando en los logs sale `Arena lista`.
 
 ### Jugar una partida
 
