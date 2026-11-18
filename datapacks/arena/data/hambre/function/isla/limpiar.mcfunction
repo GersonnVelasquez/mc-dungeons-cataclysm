@@ -1,3 +1,0 @@
-forceload add -1414 -590 -1214 -390
-say Borrando lo que se había puesto en la isla de hongos...
-schedule function hambre:isla/esperar 2s replace
