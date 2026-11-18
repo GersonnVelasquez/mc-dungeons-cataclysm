@@ -1,0 +1,23 @@
+[
+	{
+		"id": 0,
+		"name": "Sin lobby de supervivencia",
+		"color": "#FFFFFF",
+		"default": true,
+		"survival": {
+			"survivalLobby": {
+				"levelKey": "cbr:desactivado",
+				"allowGamePlayerTeleport": false,
+				"lobbyCenter": "9.5,133.0,0.5",
+				"lobbyDimension": "1.0,1.0,1.0",
+				"lobbyMuteki": false,
+				"lobbyHeal": false,
+				"lobbyChangeGamemode": false,
+				"dropInventory": false,
+				"dropGameItemOnly": true,
+				"clearInventory": false,
+				"clearGameItemOnly": true
+			}
+		}
+	}
+]

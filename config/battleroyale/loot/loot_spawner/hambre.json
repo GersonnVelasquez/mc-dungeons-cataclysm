@@ -1,0 +1,345 @@
+[
+	{
+		"lootId": 0,
+		"name": "Cofres de los Juegos del Hambre",
+		"color": "#FFAA00",
+		"default": true,
+		"entry": {
+			"lootType": "repeat",
+			"min": 8,
+			"max": 14,
+			"entry": {
+				"lootType": "weight",
+				"entries": [
+					{
+						"weight": 180.0,
+						"entry": {
+							"lootType": "empty",
+							"type": "item"
+						}
+					},
+					{
+						"weight": 10.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:wooden_sword",
+							"count": 1
+						}
+					},
+					{
+						"weight": 12.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:stone_sword",
+							"count": 1
+						}
+					},
+					{
+						"weight": 8.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:stone_axe",
+							"count": 1
+						}
+					},
+					{
+						"weight": 5.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:iron_sword",
+							"count": 1
+						}
+					},
+					{
+						"weight": 4.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:iron_axe",
+							"count": 1
+						}
+					},
+					{
+						"weight": 1.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:diamond_sword",
+							"count": 1
+						}
+					},
+					{
+						"weight": 6.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:bow",
+							"count": 1
+						}
+					},
+					{
+						"weight": 10.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:arrow",
+							"count": 8
+						}
+					},
+					{
+						"weight": 2.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:crossbow",
+							"count": 1
+						}
+					},
+					{
+						"weight": 6.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:fishing_rod",
+							"count": 1
+						}
+					},
+					{
+						"weight": 4.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:shield",
+							"count": 1
+						}
+					},
+					{
+						"weight": 8.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:leather_helmet",
+							"count": 1
+						}
+					},
+					{
+						"weight": 8.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:leather_chestplate",
+							"count": 1
+						}
+					},
+					{
+						"weight": 8.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:leather_leggings",
+							"count": 1
+						}
+					},
+					{
+						"weight": 8.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:leather_boots",
+							"count": 1
+						}
+					},
+					{
+						"weight": 5.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:chainmail_helmet",
+							"count": 1
+						}
+					},
+					{
+						"weight": 4.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:chainmail_chestplate",
+							"count": 1
+						}
+					},
+					{
+						"weight": 4.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:chainmail_leggings",
+							"count": 1
+						}
+					},
+					{
+						"weight": 5.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:chainmail_boots",
+							"count": 1
+						}
+					},
+					{
+						"weight": 5.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:golden_helmet",
+							"count": 1
+						}
+					},
+					{
+						"weight": 4.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:golden_chestplate",
+							"count": 1
+						}
+					},
+					{
+						"weight": 4.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:golden_leggings",
+							"count": 1
+						}
+					},
+					{
+						"weight": 5.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:golden_boots",
+							"count": 1
+						}
+					},
+					{
+						"weight": 3.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:iron_helmet",
+							"count": 1
+						}
+					},
+					{
+						"weight": 2.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:iron_chestplate",
+							"count": 1
+						}
+					},
+					{
+						"weight": 2.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:iron_leggings",
+							"count": 1
+						}
+					},
+					{
+						"weight": 3.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:iron_boots",
+							"count": 1
+						}
+					},
+					{
+						"weight": 1.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:diamond_helmet",
+							"count": 1
+						}
+					},
+					{
+						"weight": 0.5,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:diamond_chestplate",
+							"count": 1
+						}
+					},
+					{
+						"weight": 1.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:diamond_boots",
+							"count": 1
+						}
+					},
+					{
+						"weight": 12.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:bread",
+							"count": 3
+						}
+					},
+					{
+						"weight": 10.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:cooked_beef",
+							"count": 2
+						}
+					},
+					{
+						"weight": 10.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:cooked_porkchop",
+							"count": 2
+						}
+					},
+					{
+						"weight": 10.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:apple",
+							"count": 3
+						}
+					},
+					{
+						"weight": 8.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:baked_potato",
+							"count": 3
+						}
+					},
+					{
+						"weight": 6.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:mushroom_stew",
+							"count": 1
+						}
+					},
+					{
+						"weight": 4.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:golden_carrot",
+							"count": 2
+						}
+					},
+					{
+						"weight": 2.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:golden_apple",
+							"count": 1
+						}
+					},
+					{
+						"weight": 3.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:ender_pearl",
+							"count": 1
+						}
+					},
+					{
+						"weight": 2.0,
+						"entry": {
+							"lootType": "item",
+							"item": "minecraft:snowball",
+							"count": 8
+						}
+					}
+				]
+			}
+		}
+	}
+]

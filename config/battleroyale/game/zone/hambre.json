@@ -1,0 +1,411 @@
+[
+	{
+		"zoneId": 0,
+		"zoneName": "Fase 1",
+		"zoneColor": "#3399FFFF",
+		"default": true,
+		"preZoneDelayId": -1,
+		"zoneDelay": 0,
+		"zoneTime": 9600,
+		"zoneFunc": {
+			"zoneFuncType": "safe",
+			"damage": 1.0,
+			"moveDelay": 6000,
+			"moveTime": 3600,
+			"tickFrequency": 20,
+			"tickOffset": -1
+		},
+		"zoneShape": {
+			"zoneShapeType": "circle",
+			"start": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "100.0,120.0,100.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"end": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "60.0,120.0,60.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"allowBadShape": false
+		}
+	},
+	{
+		"zoneId": 1,
+		"zoneName": "Fase 2",
+		"zoneColor": "#33CCFFFF",
+		"preZoneDelayId": -1,
+		"zoneDelay": 9600,
+		"zoneTime": 6000,
+		"zoneFunc": {
+			"zoneFuncType": "safe",
+			"damage": 2.0,
+			"moveDelay": 2400,
+			"moveTime": 3600,
+			"tickFrequency": 20,
+			"tickOffset": -1
+		},
+		"zoneShape": {
+			"zoneShapeType": "circle",
+			"start": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "60.0,120.0,60.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"end": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "30.0,120.0,30.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"allowBadShape": false
+		}
+	},
+	{
+		"zoneId": 2,
+		"zoneName": "Fase 3",
+		"zoneColor": "#FFAA00FF",
+		"preZoneDelayId": -1,
+		"zoneDelay": 15600,
+		"zoneTime": 4800,
+		"zoneFunc": {
+			"zoneFuncType": "safe",
+			"damage": 3.0,
+			"moveDelay": 1200,
+			"moveTime": 3600,
+			"tickFrequency": 20,
+			"tickOffset": -1
+		},
+		"zoneShape": {
+			"zoneShapeType": "circle",
+			"start": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "30.0,120.0,30.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"end": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "12.0,120.0,12.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"allowBadShape": false
+		}
+	},
+	{
+		"zoneId": 3,
+		"zoneName": "Final",
+		"zoneColor": "#FF3333FF",
+		"preZoneDelayId": -1,
+		"zoneDelay": 20400,
+		"zoneTime": 9600,
+		"zoneFunc": {
+			"zoneFuncType": "safe",
+			"damage": 4.0,
+			"moveDelay": 1200,
+			"moveTime": 2400,
+			"tickFrequency": 20,
+			"tickOffset": -1
+		},
+		"zoneShape": {
+			"zoneShapeType": "circle",
+			"start": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "12.0,120.0,12.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"end": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "2.0,120.0,2.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"allowBadShape": false
+		}
+	},
+	{
+		"zoneId": 10,
+		"zoneName": "Inicio",
+		"zoneColor": "#00000000",
+		"preZoneDelayId": -1,
+		"zoneDelay": 0,
+		"zoneTime": 30,
+		"zoneFunc": {
+			"zoneFuncType": "message",
+			"moveDelay": 0,
+			"moveTime": 0,
+			"tickFrequency": 20,
+			"tickOffset": 0,
+			"setTitleAnimation": true,
+			"fadeInTicks": 10,
+			"stayTicks": 70,
+			"fadeOutTicks": 20,
+			"sendTitles": true,
+			"title": "{\"text\": \"¡Que empiecen los juegos!\", \"color\": \"gold\", \"bold\": true}",
+			"subtitle": "{\"text\": \"El último en pie gana\", \"color\": \"yellow\"}",
+			"sendActionBar": true,
+			"actionBar": "{\"text\": \"La zona empieza a cerrarse en 5 minutos\", \"color\": \"aqua\"}"
+		},
+		"zoneShape": {
+			"zoneShapeType": "circle",
+			"start": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "1000.0,120.0,1000.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"end": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "1000.0,120.0,1000.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"allowBadShape": false
+		}
+	},
+	{
+		"zoneId": 11,
+		"zoneName": "Aviso de zona",
+		"zoneColor": "#00000000",
+		"preZoneDelayId": -1,
+		"zoneDelay": 6000,
+		"zoneTime": 30,
+		"zoneFunc": {
+			"zoneFuncType": "message",
+			"moveDelay": 0,
+			"moveTime": 0,
+			"tickFrequency": 20,
+			"tickOffset": 0,
+			"setTitleAnimation": true,
+			"fadeInTicks": 10,
+			"stayTicks": 70,
+			"fadeOutTicks": 20,
+			"sendTitles": true,
+			"title": "{\"text\": \"¡La zona se cierra!\", \"color\": \"red\", \"bold\": true}",
+			"subtitle": "{\"text\": \"Muévete hacia el centro de la isla\", \"color\": \"yellow\"}",
+			"sendActionBar": true,
+			"actionBar": "{\"text\": \"Fuera de la zona pierdes vida\", \"color\": \"red\"}"
+		},
+		"zoneShape": {
+			"zoneShapeType": "circle",
+			"start": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "1000.0,120.0,1000.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"end": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "1000.0,120.0,1000.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"allowBadShape": false
+		}
+	},
+	{
+		"zoneId": 12,
+		"zoneName": "Gracia inicial",
+		"zoneColor": "#00000000",
+		"preZoneDelayId": -1,
+		"zoneDelay": 0,
+		"zoneTime": 30,
+		"zoneFunc": {
+			"zoneFuncType": "muteki",
+			"moveDelay": 0,
+			"moveTime": 0,
+			"tickFrequency": 20,
+			"tickOffset": 0,
+			"mutekiTime": 200
+		},
+		"zoneShape": {
+			"zoneShapeType": "circle",
+			"start": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "1000.0,120.0,1000.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"end": {
+				"center": {
+					"centerType": "fixed",
+					"fixed": "-1314.0,40.0,-490.0",
+					"randomRange": 0.0,
+					"playerCenterLerp": 0.0
+				},
+				"dimension": {
+					"dimensionType": "fixed",
+					"fixed": "1000.0,120.0,1000.0",
+					"randomRange": 0.0
+				},
+				"rotation": {
+					"rotationType": "fixed",
+					"fixed": 0.0,
+					"randomRange": 0.0
+				}
+			},
+			"allowBadShape": false
+		}
+	}
+]

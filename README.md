@@ -21,6 +21,7 @@ Servidor de Minecraft Java **NeoForge 1.21.1** con mazmorras y jefes, en Docker 
 | [PVP Flagging](https://modrinth.com/mod/pvp-flagging) | PvP opcional: solo pelean los que lo activan con `/pvpFlag`, y los operadores pueden crear zonas PvP | Servidor **y** jugadores |
 | [Distant Horizons](https://modrinth.com/mod/distanthorizons) | Terreno lejano hasta el horizonte; el servidor lo envía a quien tenga el mod | Servidor y, opcional, jugadores |
 | [Lithium](https://modrinth.com/mod/lithium), [ModernFix](https://modrinth.com/mod/modernfix) y [FerriteCore](https://modrinth.com/mod/ferrite-core) | Rendimiento: menos CPU por tick, menos RAM y arranque más rápido, sin cambiar el juego | Servidor y, opcional, jugadores |
+| [Custom BattleRoyale](https://modrinth.com/mod/custom-battleroyale) | Partidas tipo Juegos del Hambre en una arena aparte del mundo | Servidor **y** jugadores |
 
 Los mods y sus dependencias (bibliotecas como Curios, Balm, GeckoLib o Placebo) se descargan solos desde Modrinth al arrancar.
 
@@ -80,6 +81,7 @@ No hace falta abrir puertos en el router. Cualquiera con la dirección y un Mine
    - Pufferfish's Skills
    - Default Skill Trees
    - PVP Flagging
+   - Custom BattleRoyale
 4. Multijugador → Agregar servidor → la dirección de playit.
 
 Pufferfish's Skills e Iris usan la misma tecla (**K**); hay que cambiar una en **Opciones → Controles**.
@@ -127,6 +129,37 @@ Los operadores pueden crear zonas PvP: un rectángulo entre dos esquinas, a cual
 `100 200` y `140 240` son las coordenadas X y Z de dos esquinas opuestas (se ven con **F3**). El último número son los bloques alrededor de la zona donde avisa que estás por entrar.
 
 Los tiempos y el estado al morir o al conectarse se cambian en `data/world/serverconfig/pvp_flagging-server.toml`.
+
+## Juegos del Hambre
+
+La arena es la isla de hongos del oeste, con la cornucopia en X -1314, Z -490: ahí no aparecen monstruos y el mar la rodea. El lobby es el punto de aparición del mundo (X 9, Z 0).
+
+### Preparar la arena (una sola vez)
+
+Con nadie conectado, porque genera la isla de golpe:
+
+```bash
+docker exec mc-dungeons rcon-cli function hambre:arena/preparar
+```
+
+Cuando termina, en los logs sale `Arena lista`. Queda una cornucopia con 9 cofres sobre un bloque de oro, unos 20 cofres repartidos por la isla y toda la isla marcada como zona PvP de PVP Flagging: a quien entre se le activa el PvP.
+
+### Jugar una partida
+
+1. Cada jugador guarda sus cosas en un cofre: **al empezar la partida se vacía el inventario**.
+2. Cada jugador se une con `/battleroyale team join`, desde donde esté. `/battleroyale team leave` lo saca.
+3. El operador escribe `/battleroyale game init` y todos los que se unieron van al lobby.
+4. El operador escribe `/battleroyale game start` y aparecen alrededor de la cornucopia, con 10 segundos sin recibir daño.
+
+- Se juega en modo aventura: no se rompen ni se ponen bloques, y los cofres se llenan solos cuando alguien se acerca.
+- La zona empieza a cerrarse a los 5 minutos y llega al centro en unos 20; fuera de ella se pierde vida.
+- Quien muere pasa a espectador y su tumba queda en la isla. Gana el último en pie y todos vuelven al lobby.
+- Al volver, `/pvpFlag off` apaga el PvP que activó la isla.
+- `/battleroyale game stop` cancela la partida y regresa a todos al lobby.
+
+Equipos, tiempos, lobby y botín se cambian en `config/battleroyale/`; esos archivos se copian al servidor en cada arranque.
+
+Después de la primera partida, `/battleroyale game toLobby` lleva a cualquier jugador al lobby, juegue o no. El mod no permite quitarlo; se desactiva solo al reiniciar el servidor.
 
 ## Comandos útiles
 

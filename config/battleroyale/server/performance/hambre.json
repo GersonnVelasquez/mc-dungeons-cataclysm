@@ -1,0 +1,43 @@
+[
+	{
+		"id": 0,
+		"name": "Cofres solo cerca de quienes juegan",
+		"color": "#FFFFFF",
+		"default": true,
+		"generator": {
+			"common": {
+				"lootAnyBlockEntity": false,
+				"lootVanillaChest": true,
+				"removeLootTable": true,
+				"clearPreviousContent": true,
+				"vanillaWhiteList": [
+					"minecraft:(chest|barrel)"
+				],
+				"vanillaBlackList": [],
+				"removeNoGameidEntity": false,
+				"removeEntityWhiteList": [],
+				"removeEntityBlackList": [
+					"minecraft:armor_stand",
+					"minecraft:marker",
+					"minecraft:(block_display|item_display|text_display)",
+					"minecraft:(item_frame|glow_item_frame)"
+				]
+			},
+			"normal": {
+				"maxNormalTickLootChunk": 1000,
+				"allowNormalLootInGame": false
+			},
+			"game": {
+				"maxGameTickLootChunk": 1000,
+				"maxLootDistance": 3,
+				"bfsTolerantCenterDistance": 1,
+				"maxCachedCenter": 1000,
+				"maxQueuedChunk": 50000,
+				"bfsFrequency": 100,
+				"instantNextBfs": false,
+				"maxCachedLootChunk": 100000,
+				"cleanCachedChunk": 10000
+			}
+		}
+	}
+]

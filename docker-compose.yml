@@ -38,7 +38,13 @@ services:
         lithium
         modernfix
         ferrite-core
+        custom-battleroyale
       MODRINTH_DOWNLOAD_DEPENDENCIES: required
+
+      # ./config is copied into data/config on every start. Without this, a copy the mod
+      # rewrote in data/config would be newer and win over the repo's version.
+      SYNC_SKIP_NEWER_IN_DESTINATION: "false"
+      DATAPACKS: /datapacks/arena-hambre
 
       # Only paid Java Edition accounts can join; no whitelist, anyone with the address gets in.
       ONLINE_MODE: "TRUE"
@@ -57,6 +63,8 @@ services:
       PVP: "TRUE"
     volumes:
       - ./data:/data
+      - ./config:/config:ro
+      - ./datapacks:/datapacks:ro
     tty: true
     stdin_open: true
 

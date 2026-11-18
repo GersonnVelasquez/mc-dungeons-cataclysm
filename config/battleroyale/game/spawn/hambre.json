@@ -1,0 +1,35 @@
+[
+	{
+		"id": 0,
+		"name": "Anillo alrededor de la cornucopia",
+		"color": "#FFAA00AA",
+		"default": true,
+		"preZoneCenterOffset": -1,
+		"entry": {
+			"spawnType": "teleport",
+			"spawnShapeType": "circle",
+			"center": "-1314.0,100.0,-490.0",
+			"dimension": "22.0,0.0,22.0",
+			"detailType": "fixed",
+			"teamTogether": true,
+			"findGround": true,
+			"randomRange": 0.0,
+			"hangTime": 300,
+			"fixedPos": [
+				"-1291.5,100.0,-489.5",
+				"-1294.5,100.0,-478.5",
+				"-1302.5,100.0,-470.5",
+				"-1313.5,100.0,-467.5",
+				"-1324.5,100.0,-470.5",
+				"-1333.5,100.0,-478.5",
+				"-1335.5,100.0,-489.5",
+				"-1333.5,100.0,-500.5",
+				"-1324.5,100.0,-509.5",
+				"-1313.5,100.0,-511.5",
+				"-1302.5,100.0,-509.5",
+				"-1294.5,100.0,-500.5"
+			],
+			"needShuffle": true
+		}
+	}
+]
