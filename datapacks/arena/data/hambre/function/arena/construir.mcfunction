@@ -1,3 +1,4 @@
+execute in hambre:arena run forceload add -16 -320 15 -288
 execute in hambre:arena run fill -7 119 -307 7 119 -293 minecraft:polished_andesite
 execute in hambre:arena run fill -8 119 -308 8 123 -308 minecraft:barrier
 execute in hambre:arena run fill -8 119 -292 8 123 -292 minecraft:barrier

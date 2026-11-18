@@ -1,8 +1,68 @@
-# Loading every map chunk once converts the 1.7 map to the current format before anyone plays on it.
-execute in hambre:arena run forceload add -256 -256 -1 -1
-execute in hambre:arena run forceload add 0 -256 255 -1
-execute in hambre:arena run forceload add -256 0 -1 255
-execute in hambre:arena run forceload add 0 0 255 255
-execute in hambre:arena run forceload add -16 -320 15 -288
-say Preparando la arena: convirtiendo el mapa Downstream, puede tardar un par de minutos...
-schedule function hambre:arena/esperar 2s replace
+# forceload loads each chunk synchronously on the server thread; converting the whole 1.7 map in
+# one tick trips the 60 s watchdog, so it goes in 4x4-chunk batches a couple of seconds apart.
+say Preparando la arena: convirtiendo el mapa Downstream por partes (unos 2 minutos)...
+schedule function hambre:arena/lote/01 2s
+schedule function hambre:arena/lote/02 4s
+schedule function hambre:arena/lote/03 6s
+schedule function hambre:arena/lote/04 8s
+schedule function hambre:arena/lote/05 10s
+schedule function hambre:arena/lote/06 12s
+schedule function hambre:arena/lote/07 14s
+schedule function hambre:arena/lote/08 16s
+schedule function hambre:arena/lote/09 18s
+schedule function hambre:arena/lote/10 20s
+schedule function hambre:arena/lote/11 22s
+schedule function hambre:arena/lote/12 24s
+schedule function hambre:arena/lote/13 26s
+schedule function hambre:arena/lote/14 28s
+schedule function hambre:arena/lote/15 30s
+schedule function hambre:arena/lote/16 32s
+schedule function hambre:arena/lote/17 34s
+schedule function hambre:arena/lote/18 36s
+schedule function hambre:arena/lote/19 38s
+schedule function hambre:arena/lote/20 40s
+schedule function hambre:arena/lote/21 42s
+schedule function hambre:arena/lote/22 44s
+schedule function hambre:arena/lote/23 46s
+schedule function hambre:arena/lote/24 48s
+schedule function hambre:arena/lote/25 50s
+schedule function hambre:arena/lote/26 52s
+schedule function hambre:arena/lote/27 54s
+schedule function hambre:arena/lote/28 56s
+schedule function hambre:arena/lote/29 58s
+schedule function hambre:arena/lote/30 60s
+schedule function hambre:arena/lote/31 62s
+schedule function hambre:arena/lote/32 64s
+schedule function hambre:arena/lote/33 66s
+schedule function hambre:arena/lote/34 68s
+schedule function hambre:arena/lote/35 70s
+schedule function hambre:arena/lote/36 72s
+schedule function hambre:arena/lote/37 74s
+schedule function hambre:arena/lote/38 76s
+schedule function hambre:arena/lote/39 78s
+schedule function hambre:arena/lote/40 80s
+schedule function hambre:arena/lote/41 82s
+schedule function hambre:arena/lote/42 84s
+schedule function hambre:arena/lote/43 86s
+schedule function hambre:arena/lote/44 88s
+schedule function hambre:arena/lote/45 90s
+schedule function hambre:arena/lote/46 92s
+schedule function hambre:arena/lote/47 94s
+schedule function hambre:arena/lote/48 96s
+schedule function hambre:arena/lote/49 98s
+schedule function hambre:arena/lote/50 100s
+schedule function hambre:arena/lote/51 102s
+schedule function hambre:arena/lote/52 104s
+schedule function hambre:arena/lote/53 106s
+schedule function hambre:arena/lote/54 108s
+schedule function hambre:arena/lote/55 110s
+schedule function hambre:arena/lote/56 112s
+schedule function hambre:arena/lote/57 114s
+schedule function hambre:arena/lote/58 116s
+schedule function hambre:arena/lote/59 118s
+schedule function hambre:arena/lote/60 120s
+schedule function hambre:arena/lote/61 122s
+schedule function hambre:arena/lote/62 124s
+schedule function hambre:arena/lote/63 126s
+schedule function hambre:arena/lote/64 128s
+schedule function hambre:arena/construir 131s
