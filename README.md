@@ -153,20 +153,22 @@ La arena es el mapa [Downstream](https://www.planetminecraft.com/project/downstr
 
 ### Jugar una partida
 
-1. Cada jugador guarda sus cosas en un cofre: **al empezar la partida se vacía el inventario**.
-2. Cada jugador se une con `/battleroyale team join`, desde donde esté. `/battleroyale team leave` lo saca.
-3. El operador escribe `/function hambre:partida/preparar` y todos los que se unieron van al lobby de la arena.
-4. El operador escribe `/battleroyale game start` y cada uno aparece en un pedestal alrededor de la cornucopia, con 10 segundos sin recibir daño.
+1. El operador abre la partida con `/function hambre:partida/preparar`. A todos les llega un mensaje con dos botones.
+2. Cada jugador que quiera jugar guarda sus cosas en un cofre (**al empezar la partida se vacía el inventario**), va al lobby de la arena con `/battleroyale game toLobby` y, ya ahí, se une con `/battleroyale team join`. El mod solo cuenta a quien está dentro de la arena: unirse desde el mundo normal no sirve.
+3. El operador empieza con `/function hambre:partida/empezar`. Cada jugador aparece en un pedestal alrededor de la cornucopia, con 10 segundos sin recibir daño.
 
 - Se juega en modo aventura: no se rompen ni se ponen bloques, y los cofres se llenan solos cuando alguien se acerca.
 - La zona empieza a cerrarse a los 5 minutos y llega a la cornucopia en unos 20; fuera de ella se pierde vida.
 - Quien muere pasa a espectador. Gana el último en pie y todos vuelven al lobby.
-- En el lobby, pisar el bloque de oro devuelve al spawn del mundo normal y apaga el PvP.
-- `/battleroyale game stop` cancela la partida y regresa a todos al lobby.
+- En el lobby, pisar el bloque de oro devuelve al spawn del mundo normal y apaga el PvP. Quien se unió y ya no quiere jugar sale antes del equipo con `/battleroyale team leave`.
+- `/function hambre:partida/parar` cancela la partida y regresa a todos al lobby.
+- Para probar solo, invoca un mob en el lobby y agrégalo como rival: `/summon minecraft:pig ~ ~ ~` y luego `/battleroyale team add @e[type=minecraft:pig,limit=1,sort=nearest] 2`.
+
+Usa siempre estas funciones en vez de `/battleroyale game load`, `init`, `start` o `stop` directos. El mod juega la partida en la dimensión donde se escribe el comando, así que desde el mundo normal la partida se movería ahí.
 
 Equipos, tiempos, lobby y botín se cambian en `config/battleroyale/`; esos archivos se copian al servidor en cada arranque.
 
-Después de la primera partida, `/battleroyale game toLobby` lleva a cualquier jugador al lobby, juegue o no. El mod no permite quitarlo; se desactiva solo al reiniciar el servidor.
+Desde que se abre la primera partida y hasta reiniciar el servidor, `/battleroyale game toLobby` lleva a cualquier jugador al lobby, juegue o no. El mod no permite quitarlo.
 
 ## Comandos útiles
 

@@ -9,7 +9,7 @@
 			"playerTotal": 16,
 			"teamSize": 1,
 			"aiTeammate": false,
-			"aiEnemy": false,
+			"aiEnemy": true,
 			"freeToJoin": true,
 			"requiredTeamToStart": 2,
 			"maxGameTime": 30000,

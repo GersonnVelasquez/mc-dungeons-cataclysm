@@ -1,3 +1,4 @@
-# The BattleRoyale world is whichever dimension the load runs in, so it has to run inside the arena.
+# The mod plays the game in whichever dimension "battleroyale game load/init/start/stop" runs in, and only
+# counts players who are already there, so every one of those commands runs inside the arena.
 execute in hambre:arena run battleroyale game load
-battleroyale game init
+tellraw @a ["",{"text":"¡Juegos del Hambre! ","color":"gold","bold":true},{"text":"Guarda tus cosas (al empezar se vacía el inventario), ","color":"yellow"},{"text":"[ve al lobby]","color":"aqua","clickEvent":{"action":"run_command","value":"/battleroyale game toLobby"},"hoverEvent":{"action":"show_text","contents":"/battleroyale game toLobby"}},{"text":" y ahí ","color":"yellow"},{"text":"[únete]","color":"aqua","clickEvent":{"action":"run_command","value":"/battleroyale team join"},"hoverEvent":{"action":"show_text","contents":"/battleroyale team join"}},{"text":".","color":"yellow"}]
